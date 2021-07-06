@@ -11,7 +11,7 @@ function Albums(props) {
                 {
                     albums.map(album=>{
                         return(
-                            <Album album={album}   key={album.id}/>
+                            <Album album={album} key={album.id}/>
                         )
                     })
                 }

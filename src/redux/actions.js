@@ -1,4 +1,4 @@
-import {ALBUM_SELECT, ALBUMS_LOAD_START, ALBUMS_LOAD_SUCCESS, PHOTOS_LOAD_START, PHOTOS_LOAD_SUCCESS} from "./types";
+import { ALBUMS_LOAD_START, ALBUMS_LOAD_SUCCESS, PHOTOS_LOAD_START, PHOTOS_LOAD_SUCCESS} from "./types";
 
 export const loadAlbums=()=>{
     return (dispatch)=>{
@@ -32,9 +32,3 @@ export const loadPhotos=()=>{
     }
 }
 
-export const selectAlbum=(albumId)=>{
-    return {
-        type: ALBUM_SELECT,
-        payload: albumId
-    }
-}

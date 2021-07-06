@@ -1,13 +1,15 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import Photo from "./Photo";
+import {useParams} from "react-router-dom"
 
 function Photos(props) {
     const photos = useSelector(state => state.photos.photos)
-    const selectedAlbumId = useSelector(state => state.albums.selectedAlbumId);
+    const id = parseInt(useParams().id)
+    console.log(id)
 
     const filteredPhotos = photos.filter(photo=>{
-        if (photo.albumId===selectedAlbumId){
+        if (photo.albumId===id){
             return true
         }
         return false
